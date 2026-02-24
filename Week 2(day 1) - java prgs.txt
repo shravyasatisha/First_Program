@@ -1,0 +1,91 @@
+JAVA PRG : 1
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+1. class ProductDiscount {
+    public double getFinalAmount(double amount,boolean isMember){
+        if(amount>=1000){
+            if(isMember){
+                double discount = amount * 0.02;
+                amount = amount - discount;
+            }
+            else{
+                amount = amount*0.01;
+            }
+        }
+        else{
+            System.out.println("No discount !!");
+        }
+        return amount;
+    }
+    public static void main(String[] args) {
+        ProductDiscount pd = new ProductDiscount();
+        System.out.println(pd.getFinalAmount(1000,false));
+    }
+}
+
+
+2JAVA PRG : 2
+.// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class SmartBillingSlab {
+    public double calculateBill(double amount, boolean isFirstOrder){
+        if(amount < 500){
+            System.out.println("no discount");
+            amount=amount;
+        }
+        else if(amount >= 500 && amount < 1500){
+                double discount = amount * 0.05;
+                amount = amount - discount;
+        }
+        else{
+            double discount = amount * 0.01;
+            amount = amount - discount;
+        }
+        if(isFirstOrder){
+            double discount = amount * 0.02;
+            amount = amount - discount ;
+        }
+        return amount;
+    }
+    public static void main(String[] args){
+        SmartBillingSlab sbs = new SmartBillingSlab();
+        System.out.println(sbs.calculateBill(400,true));
+    }
+}
+
+
+3Q. JAVA PRG : 3
+(3) Bank Loan Approval Logic
+Write a method:  String loanDecision(int age, int salary, int creditScore)
+
+Rules using nested if–else:
+ If age ≥ 21
+    If salary ≥ 25000
+         If creditScore ≥ 700  print Approved
+         Else print Rejected – Low credit score
+    Else print Rejected – Low salary
+ Else print Rejected – Under age
+
+Sol:class BankLoan {
+    public String loanDecision(int age, int salary, int creditScore)){
+        if(age >=21){
+		if(salary >= 25000){
+			if(creditScore >= 700){
+				return "Approved";
+        }
+        else{
+            return "rejected - under age";
+        }
+    }
+    public static void main(String[] args){
+        BankLoan lb = new BankLoan();
+        System.out.println(lb.BankLoan(25,30000,720));
+    }
+}
+
+
+
+
+
